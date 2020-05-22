@@ -1,0 +1,24 @@
+[ 
+  {
+    "name": "height",
+    "id": "height",
+    "label": "Height",
+    "type": "number",
+    "default": 500,
+    "min": 100,
+    "max": 1600,
+    "step": 10,
+    "display": "slider"
+  },
+  {
+    "name": "width",
+    "id": "width",
+    "label": "Width",
+    "type": "number",
+    "default": 400,
+    "min": 100,
+    "max": 1600,
+    "step": 10,
+    "display": "slider"
+  }
+]

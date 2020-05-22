@@ -1,0 +1,17 @@
+<div id="chat__container-{{ name }}" style="height: {{ module.height ~ px }}; width: {{ module.width ~ px }}"></div>
+
+<script type="text/javascript">
+  function onConversationsAPIReady() {
+    console.log(`HubSpot Conversations API: ${window.HubSpotConversations}`);
+  }  
+  
+  if (window.HubSpotConversations) {
+    onConversationsAPIReady();
+  } else {
+    window.hsConversationsSettings = {
+      loadImmediately: true,
+      inlineEmbedSelector: '#chat_container'
+    };
+    window.hsConversationsOnReady = [onConversationsAPIReady];
+  }
+</script>
