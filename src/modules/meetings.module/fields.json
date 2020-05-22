@@ -1,0 +1,8 @@
+[ 
+  {
+    "name": "meeting",
+    "id": "meeting",
+    "label": "Meeting links",
+    "type": "meeting"
+  }
+]
