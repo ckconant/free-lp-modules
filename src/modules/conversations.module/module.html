@@ -1,6 +1,8 @@
-<div id="chat__container-{{ name }}" style="height: {{ module.height ~ px }}; width: {{ module.width ~ px }}"></div>
+<div id="chat__container-{{ name }}" style="height: {{ module.height ~ 'px' }}; width: {{ module.width ~ 'px' }}"></div>
 
 <script type="text/javascript">
+  var elem = document.querySelector('#chat__container-{{ name }}');
+  
   function onConversationsAPIReady() {
     console.log(`HubSpot Conversations API: ${window.HubSpotConversations}`);
   }  
@@ -10,8 +12,9 @@
   } else {
     window.hsConversationsSettings = {
       loadImmediately: true,
-      inlineEmbedSelector: '#chat_container'
+      inlineEmbedSelector: '#chat__container-{{ name }}'            
     };
+    elem.style.backgroundColor = '#e5f5f8';
     window.hsConversationsOnReady = [onConversationsAPIReady];
   }
 </script>
